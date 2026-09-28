@@ -45,7 +45,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-16 md:py-28 bg-slate-50 relative overflow-hidden">
+    <section className="py-16 md:py-28 bg-slate-50 relative overflow-clip">
       {/* Soft Light Ambient Glows & Dot Grid Background */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute -top-32 -right-32 w-[550px] h-[550px] bg-sky-200/40 rounded-full blur-3xl" />
@@ -96,15 +96,15 @@ export default function Testimonials() {
           </div>
 
           {/* Right Column: Sticky Stacking Testimonial Cards */}
-          <div className="lg:col-span-7 space-y-6 relative">
+          <div className="lg:col-span-7 relative pb-12">
             {reviews.map((rev, idx) => {
-              // Calculate sticky top offset for stacking effect
-              const topOffset = 110 + idx * 20; // 110px, 130px, 150px, 170px
+              // Calculate sticky top offset for clean deck stacking effect
+              const topOffset = 100 + idx * 24; // 100px, 124px, 148px, 172px
               return (
                 <div
                   key={rev.id}
-                  style={{ top: `${topOffset}px` }}
-                  className="sticky z-10 bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-2xl transition-all duration-300 group text-slate-900"
+                  style={{ top: `${topOffset}px`, zIndex: idx + 10 }}
+                  className="sticky bg-white rounded-3xl p-6 sm:p-7 border-2 border-slate-200/90 shadow-xl hover:shadow-2xl transition-all duration-300 group text-slate-900 mb-8"
                 >
                   <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
                     
