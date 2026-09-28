@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom animations and effects */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.9; }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Custom badge glow utilities */
+.badge-green {
+  background-color: #ecfdf5;
+  color: #047857;
+  border: 1.5px solid #a7f3d0;
+}
+
+.badge-yellow {
+  background-color: #fefce8;
+  color: #a16207;
+  border: 1.5px solid #fef08a;
+}
+
+.badge-blue {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1.5px solid #bfdbfe;
+}
+
+.badge-pink {
+  background-color: #fdf2f8;
+  color: #be185d;
+  border: 1.5px solid #fbcfe8;
+}
+
+.badge-purple {
+  background-color: #faf5ff;
+  color: #6b21a8;
+  border: 1.5px solid #e9d5ff;
+}
