@@ -76,13 +76,13 @@ export default function Hero() {
           <img
             src={slide.bgImage}
             alt={slide.title}
-            className={`w-full h-full object-cover object-center transform transition-transform duration-10000 ${
-              currentSlide === idx ? "scale-105" : "scale-100"
+            className={`w-full h-full object-cover object-center transform transition-transform duration-1000 ${
+              currentSlide === idx ? "opacity-100 animate-kenburns" : "opacity-90"
             }`}
           />
-          {/* Gradient Overlay for high readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/70 to-slate-950/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/40" />
+          {/* Gradient Overlay for high readability & vibrant image visibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/45 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-slate-950/20" />
         </div>
       ))}
 

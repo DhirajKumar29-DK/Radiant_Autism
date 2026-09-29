@@ -14,10 +14,10 @@ export default function ServicesPage() {
           <img
             src="/hero_child_therapy.jpg"
             alt="Clinical therapy session background"
-            className="w-full h-full object-cover object-center transform scale-105"
+            className="w-full h-full object-cover object-center transform animate-kenburns"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-950/60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/50 to-slate-950/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-slate-950/20" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-4">

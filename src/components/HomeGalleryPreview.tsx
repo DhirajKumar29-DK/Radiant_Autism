@@ -157,97 +157,70 @@ export default function HomeGalleryPreview() {
 
       </div>
 
-      {/* Interactive Lightbox Slider Modal */}
+      {/* Minimalist Frameless Lightbox Slider Modal */}
       {selectedIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 select-none animate-fadeIn"
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 select-none animate-fadeIn"
           onClick={() => setSelectedIndex(null)}
         >
+          {/* Floating Top-Right Close Button */}
+          <button
+            onClick={() => setSelectedIndex(null)}
+            type="button"
+            className="fixed top-5 right-5 sm:top-8 sm:right-8 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white backdrop-blur-md transition-all cursor-pointer shadow-lg"
+            aria-label="Close Preview"
+          >
+            <X className="w-6 h-6 stroke-[2.5]" />
+          </button>
+
+          {/* Floating Left Arrow Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePrev();
+            }}
+            type="button"
+            className="fixed left-4 sm:left-8 top-1/2 -translate-y-1/2 z-50 p-3.5 sm:p-4 rounded-full bg-white/10 hover:bg-blue-600 text-white backdrop-blur-md transition-all shadow-xl hover:scale-110 cursor-pointer border border-white/15"
+            aria-label="Previous Image"
+          >
+            <ChevronLeft className="w-6 h-6 sm:w-7 sm:h-7 stroke-[3]" />
+          </button>
+
+          {/* Floating Right Arrow Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNext();
+            }}
+            type="button"
+            className="fixed right-4 sm:right-8 top-1/2 -translate-y-1/2 z-50 p-3.5 sm:p-4 rounded-full bg-white/10 hover:bg-blue-600 text-white backdrop-blur-md transition-all shadow-xl hover:scale-110 cursor-pointer border border-white/15"
+            aria-label="Next Image"
+          >
+            <ChevronRight className="w-6 h-6 sm:w-7 sm:h-7 stroke-[3]" />
+          </button>
+
+          {/* Center Frameless Image Display */}
           <div
-            className="relative max-w-5xl w-full rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 shadow-2xl flex flex-col justify-between"
+            className="relative max-h-[80vh] max-w-[88vw] flex flex-col items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Top Modal Bar */}
-            <div className="p-4 sm:px-6 bg-slate-900/90 border-b border-slate-800/80 flex items-center justify-between text-white">
-              <div className="flex items-center gap-3">
-                <span className="px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-extrabold">
-                  {galleryPhotos[selectedIndex].category}
-                </span>
-                <span className="text-xs font-bold text-slate-400">
-                  Photo {selectedIndex + 1} of {galleryPhotos.length}
-                </span>
-              </div>
+            <img
+              src={galleryPhotos[selectedIndex].image}
+              alt={galleryPhotos[selectedIndex].title}
+              className="max-h-[75vh] max-w-[88vw] w-auto h-auto object-contain rounded-2xl shadow-2xl border border-white/10 transition-all duration-300"
+            />
 
-              {/* Close Button */}
-              <button
-                onClick={() => setSelectedIndex(null)}
-                className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold"
-                aria-label="Close Preview"
-              >
-                <span>Close</span>
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-
-            {/* Central Image Showcase with Side Arrows */}
-            <div className="relative aspect-16/10 sm:aspect-16/9 w-full bg-slate-950 flex items-center justify-center overflow-hidden">
-              <img
-                src={galleryPhotos[selectedIndex].image}
-                alt={galleryPhotos[selectedIndex].title}
-                className="w-full h-full object-contain transition-all duration-300"
-              />
-
-              {/* Left Arrow Button */}
-              <button
-                onClick={handlePrev}
-                type="button"
-                className="absolute left-4 top-1/2 -translate-y-1/2 p-3.5 rounded-full bg-slate-900/80 hover:bg-blue-600 text-white border border-white/20 shadow-2xl transition-all hover:scale-110"
-                aria-label="Previous Image"
-              >
-                <ChevronLeft className="w-6 h-6 stroke-[3]" />
-              </button>
-
-              {/* Right Arrow Button */}
-              <button
-                onClick={handleNext}
-                type="button"
-                className="absolute right-4 top-1/2 -translate-y-1/2 p-3.5 rounded-full bg-slate-900/80 hover:bg-blue-600 text-white border border-white/20 shadow-2xl transition-all hover:scale-110"
-                aria-label="Next Image"
-              >
-                <ChevronRight className="w-6 h-6 stroke-[3]" />
-              </button>
-            </div>
-
-            {/* Bottom Caption Bar */}
-            <div className="p-4 sm:px-6 bg-slate-900 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-white">
-              <div className="space-y-0.5 text-center sm:text-left">
-                <h4 className="text-base sm:text-lg font-black text-white">
-                  {galleryPhotos[selectedIndex].title}
-                </h4>
-                <p className="text-xs text-slate-400 font-medium">
-                  Use Left (←) and Right (→) arrow keys to switch photos
-                </p>
-              </div>
-
-              <div className="flex items-center gap-2 shrink-0">
-                <button
-                  onClick={handlePrev}
-                  className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold transition-colors flex items-center gap-1"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                  <span>Prev</span>
-                </button>
-                <span className="text-xs text-slate-500 font-mono px-1">
-                  {selectedIndex + 1}/{galleryPhotos.length}
-                </span>
-                <button
-                  onClick={handleNext}
-                  className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-xs font-extrabold shadow-md transition-colors flex items-center gap-1"
-                >
-                  <span>Next</span>
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
+            {/* Minimal Floating Bottom Info Pill */}
+            <div className="mt-4 px-5 py-2.5 rounded-full bg-slate-900/90 border border-white/15 backdrop-blur-md text-white flex flex-wrap items-center justify-center gap-3 text-xs font-bold shadow-xl">
+              <span className="px-3 py-0.5 rounded-full bg-blue-600 text-white font-extrabold text-[11px]">
+                {galleryPhotos[selectedIndex].category}
+              </span>
+              <span className="text-slate-200 font-extrabold truncate max-w-xs sm:max-w-md">
+                {galleryPhotos[selectedIndex].title}
+              </span>
+              <span className="text-slate-400 font-mono text-[11px] border-l border-white/20 pl-3">
+                {selectedIndex + 1} of {galleryPhotos.length}
+              </span>
             </div>
           </div>
         </div>

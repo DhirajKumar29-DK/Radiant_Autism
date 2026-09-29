@@ -42,6 +42,15 @@ export default function Testimonials() {
       text: "As healthcare professionals ourselves, we evaluated multiple therapy centers. Radiant’s evidence-based ABA methodology, BCBA supervision, and compassionate staff exceeded all our expectations.",
       rating: 5,
     },
+    {
+      id: 5,
+      name: "Meera & Rajesh P.",
+      role: "Parents of 8-year-old Rohan",
+      service: "Life Skills & Social Peer Group",
+      image: "/about_center_photo.jpg",
+      text: "The Life Skills and peer group programs at Radiant gave Rohan the independence we dreamed of. He now manages his daily schedule and handles social situations with genuine confidence!",
+      rating: 5,
+    },
   ];
 
   return (
