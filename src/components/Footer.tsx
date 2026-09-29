@@ -15,12 +15,14 @@ import {
 
 export default function Footer() {
   const serviceLinks = [
-    { name: "ABA Behavior Therapy", path: "/services/aba-therapy" },
-    { name: "Speech & Language Therapy", path: "/services/speech-therapy" },
-    { name: "Occupational & Sensory Integration", path: "/services/occupational-therapy" },
-    { name: "Pediatric Physiotherapy", path: "/services/pediatric-physiotherapy" },
-    { name: "Buddy Steps Early Intervention", path: "/services/buddy-steps" },
-    { name: "Comprehensive Diagnostic Assessments", path: "/services/behavioral-assessments" },
+    { name: "ABA / IBI Therapy", path: "/services/aba-therapy" },
+    { name: "Group Programs", path: "/services/group-programs" },
+    { name: "Speech Therapy", path: "/services/speech-therapy" },
+    { name: "Occupational Therapy", path: "/services/occupational-therapy" },
+    { name: "Behaviour Consultation", path: "/services/behaviour-consultation" },
+    { name: "Psychoeducational Assessments", path: "/services/psychoeducational-assessments" },
+    { name: "Psychotherapy Services", path: "/services/psychotherapy-services" },
+    { name: "Life Skills Program", path: "/services/life-skills" },
   ];
 
   return (
