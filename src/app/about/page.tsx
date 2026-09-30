@@ -1,11 +1,25 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import AboutCentreDetail from "@/components/AboutCentreDetail";
 import OurTeamSection from "@/components/OurTeamSection";
 import ClinicalPillars from "@/components/ClinicalPillars";
-import { Award, ShieldCheck, HeartHandshake, Sparkles, Users, ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About Us | Radiant Autism Center",
+  description:
+    "Learn about Radiant Autism Center's clinical excellence, BCBA supervised leadership, OAP approval, and compassionate approach to child skill development.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Us | Radiant Autism Center",
+    description:
+      "Learn about Radiant Autism Center's clinical excellence, BCBA supervised leadership, and compassionate approach to child skill development.",
+    images: ["/about_center_photo.jpg"],
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -37,10 +51,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* About Centre & Purpose Built Spaces (Screenshot Section) */}
+      {/* About Centre & Purpose Built Spaces */}
       <AboutCentreDetail />
 
-      {/* Clinical Leadership & Our Team (Replacing Testimonials) */}
+      {/* Clinical Leadership & Our Team */}
       <OurTeamSection />
 
       {/* Luxury 4 Clinical Pillars Section */}
@@ -59,4 +73,3 @@ export default function AboutPage() {
     </div>
   );
 }
-

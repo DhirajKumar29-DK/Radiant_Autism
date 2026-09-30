@@ -46,6 +46,26 @@ export async function generateMetadata({ params }: ServicePageProps) {
   return {
     title: `${service.title} | Radiant Autism Center`,
     description: service.shortDescription,
+    alternates: {
+      canonical: `/services/${service.id}`,
+    },
+    openGraph: {
+      title: `${service.title} | Radiant Autism Center`,
+      description: service.shortDescription,
+      url: `/services/${service.id}`,
+      images: [
+        {
+          url: service.heroImage || service.image,
+          alt: service.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} | Radiant Autism Center`,
+      description: service.shortDescription,
+      images: [service.heroImage || service.image],
+    },
   };
 }
 

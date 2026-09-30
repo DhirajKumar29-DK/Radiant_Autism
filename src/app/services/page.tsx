@@ -1,8 +1,22 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import ServicesGrid from "@/components/ServicesGrid";
 import { Sparkles } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Clinical Services | ABA, Speech & Occupational Therapy",
+  description:
+    "Explore Radiant Autism Center's 8 specialized programs: ABA/IBI Therapy, Speech Therapy, Occupational Therapy, Group Programs, Behaviour Consultation, Psychoeducational Assessments, Psychotherapy & Life Skills.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Clinical Services | Radiant Autism Center",
+    description:
+      "Explore Radiant Autism Center's 8 specialized programs: ABA/IBI Therapy, Speech Therapy, Occupational Therapy, Group Programs & Assessments.",
+    images: ["/hero_child_therapy.jpg"],
+  },
+};
 
 export default function ServicesPage() {
   return (
