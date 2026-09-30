@@ -9,9 +9,9 @@ import HomeGalleryPreview from "@/components/HomeGalleryPreview";
 import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
-  title: "Radiant Autism Center | BCBA Supervised Autism Care & Skill Development",
+  title: "Radiant Autism Center | ABA & Skill Therapy",
   description:
-    "Leading OAP Approved & BCBA Supervised Autism Center providing ABA Therapy, Speech Therapy, Occupational Therapy, and Early Intervention Group Programs.",
+    "OAP approved & BCBA supervised Autism Center providing ABA therapy, speech therapy, occupational therapy & early intervention in Ontario.",
   alternates: {
     canonical: "/",
   },

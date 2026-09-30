@@ -11,7 +11,9 @@ const plusJakarta = Plus_Jakarta_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://radiantautism.com";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://radiant-autism.vercel.app");
 
 export const viewport: Viewport = {
   themeColor: "#2563eb",
@@ -22,11 +24,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Radiant Autism Center | BCBA Supervised Autism Care & Therapy",
+    default: "Radiant Autism Center | ABA & Skill Therapy",
     template: "%s | Radiant Autism Center",
   },
   description:
-    "OAP Approved & BCBA Supervised ABA Therapy, Speech Therapy, Occupational Therapy, Behavior Consultation, Psychoeducational Assessments & Early Intervention Social Groups.",
+    "OAP approved & BCBA supervised Autism Center providing ABA therapy, speech therapy, occupational therapy & early intervention in Ontario.",
   keywords: [
     "Autism Center",
     "ABA Therapy",
@@ -37,9 +39,7 @@ export const metadata: Metadata = {
     "BCBA Supervised",
     "Behavior Consultation",
     "Early Intervention Social Groups",
-    "Psychoeducational Assessment",
     "Autism Therapy Ontario",
-    "Autism Skill Center",
   ],
   authors: [{ name: "Radiant Autism Center", url: siteUrl }],
   creator: "Radiant Autism Center",
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    title: "Radiant Autism Center | BCBA Supervised Autism Care & Therapy",
+    title: "Radiant Autism Center | ABA & Skill Therapy",
     description:
-      "OAP Approved & BCBA Supervised ABA Therapy, Speech Therapy, Occupational Therapy, Behavior Consultation & Early Intervention Programs.",
+      "OAP approved & BCBA supervised Autism Center providing ABA therapy, speech therapy, occupational therapy & early intervention in Ontario.",
     siteName: "Radiant Autism Center",
     images: [
       {
@@ -71,9 +71,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Radiant Autism Center | BCBA Supervised Autism Care & Therapy",
+    title: "Radiant Autism Center | ABA & Skill Therapy",
     description:
-      "OAP Approved & BCBA Supervised ABA Therapy, Speech Therapy, Occupational Therapy & Early Intervention Programs.",
+      "OAP approved & BCBA supervised Autism Center providing ABA therapy, speech therapy, occupational therapy & early intervention in Ontario.",
     images: ["/hero_child_therapy.jpg"],
   },
   robots: {

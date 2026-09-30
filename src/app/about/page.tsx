@@ -9,14 +9,14 @@ import { Sparkles, ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "About Us | Radiant Autism Center",
   description:
-    "Learn about Radiant Autism Center's clinical excellence, BCBA supervised leadership, OAP approval, and compassionate approach to child skill development.",
+    "Learn about Radiant Autism Center, our certified BCBA leadership, clinical standards, and compassionate child skill development in Ontario.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About Us | Radiant Autism Center",
     description:
-      "Learn about Radiant Autism Center's clinical excellence, BCBA supervised leadership, and compassionate approach to child skill development.",
+      "Learn about Radiant Autism Center, our certified BCBA leadership, clinical standards, and compassionate child skill development in Ontario.",
     images: ["/about_center_photo.jpg"],
   },
 };

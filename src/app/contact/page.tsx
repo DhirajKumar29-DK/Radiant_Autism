@@ -4,16 +4,16 @@ import ContactForm from "@/components/ContactForm";
 import { Sparkles, MapPin, Clock, MessageSquare } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Schedule Assessment & Visit",
+  title: "Contact Us | Radiant Autism Center",
   description:
-    "Get in touch with Radiant Autism Center for ABA Therapy intake, clinical assessments, facility visits, and OAP funding guidance.",
+    "Get in touch with Radiant Autism Center for ABA therapy intake, clinical assessments, facility visits, and OAP funding support.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     title: "Contact Us | Radiant Autism Center",
     description:
-      "Reach out to Radiant Autism Center for intake, consultations, facility visits, and OAP funding guidance.",
+      "Get in touch with Radiant Autism Center for ABA therapy intake, clinical assessments, facility visits, and OAP funding support.",
     images: ["/hero_bg_speech.jpg"],
   },
 };
