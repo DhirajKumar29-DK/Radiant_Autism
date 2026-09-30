@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function JsonLd() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://radiantautism.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://radiant-autism.vercel.app";
 
   const schemaData = {
     "@context": "https://schema.org",

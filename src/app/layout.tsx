@@ -11,9 +11,7 @@ const plusJakarta = Plus_Jakarta_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://radiant-autism.vercel.app");
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://radiant-autism.vercel.app";
 
 export const viewport: Viewport = {
   themeColor: "#2563eb",

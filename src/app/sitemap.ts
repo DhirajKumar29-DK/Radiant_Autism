@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { SERVICES_DATA } from "@/data/servicesData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://radiantautism.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://radiant-autism.vercel.app";
   const currentDate = new Date();
 
   // Core Static Routes
